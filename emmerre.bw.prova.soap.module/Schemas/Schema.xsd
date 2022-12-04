@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/Schema"
+	xmlns:tns="http://www.example.org/Schema"
+	elementFormDefault="qualified">
+	<complexType name="OrderType">
+		<sequence>
+			<element name="title" type="string" minOccurs="1"
+				maxOccurs="1" />
+			<element name="isbn" type="string" minOccurs="1"
+				maxOccurs="1" />
+			<element name="prezzo" type="int" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+	<element name="requestOrder" type="tns:OrderType" />
+	<element name="responseOrder" type="string" />
+</schema>
